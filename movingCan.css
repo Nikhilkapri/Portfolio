@@ -1,0 +1,75 @@
+/* ✅ Container now fits inside About section */
+.banner {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ Product centered WITHOUT absolute viewport hacks */
+.banner .product {
+    width: 260px;
+    height: 260px;
+    position: relative;
+    transition: 0.7s;
+    --left: 0px;
+}
+
+/* ✅ Properly centered soda */
+.banner .product .soda {
+    background:
+        var(--url) var(--left) 0,
+        url(assets/mockup.png);
+    background-size: auto 100%;
+    width: 160px;
+    aspect-ratio: 2 / 4;
+    background-blend-mode: multiply;
+    mask-image: url(assets/mockup.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ✅ Hover animation stays perfect */
+.banner .product:hover {
+    --left: -800px;
+    transform: translateY(-25px);
+}
+@media (max-width: 768px) {
+    .banner .product:hover {
+        --left: -850px;
+        transform: translateY(-18px); /* optional: softer movement on mobile */
+    }
+}
+
+.banner .product .soda:nth-child(2) {
+    opacity: 0;
+}
+
+.banner .product:hover .soda:nth-child(2) {
+    opacity: 1;
+}
+
+/* ✅ MOBILE SCALE FIX */
+@media (max-width: 768px) {
+    .banner {
+        max-width: 230px;
+    }
+
+    .banner .product {
+        width: 200px;
+        height: 200px;
+    }
+
+    .banner .product .soda {
+        width: 120px;
+    }
+}

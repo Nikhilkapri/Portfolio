@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a; 
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 80px;
+    background-color: #020617;
+}
+
+nav .left {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(170, 107, 228);
+}
+
+/* MOBILE MENU ICON */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ✅ RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav .right {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(1, 1, 21);
+        display: none;
+    }
+
+    nav .right ul {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav .right ul li {
+        margin: 15px 0;
+    }
+
+    nav .right.active {
+        display: block;
+    }
+}
+/* ----- */
+.firstSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 80px auto;
+    padding: 0 10%;
+    flex-wrap: wrap;
+}
+
+.firstSection > div {
+    flex: 1;
+}
+
+/* LEFT TEXT */
+.leftSection {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.leftSection .name {
+    color: #a855f7;
+    font-weight: 700;
+}
+
+.leftSection .role {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* RIGHT IMAGE */
+.rightSection {
+    display: flex;
+    justify-content: center;
+}
+
+.rightSection img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .firstSection {
+        flex-direction: column;
+        text-align: center;
+        margin: 50px 0;
+        padding: 0 6%;
+    }
+
+    .leftSection {
+        font-size: 2rem;
+    }
+
+    .rightSection img {
+        max-width: 280px;
+    }
+}
+/* -------------skill section css------------------ */
+.skillsSection {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #a855f7;
+}
+
+/* GRID */
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+/* SKILL CARD */
+.skillCard {
+    background: linear-gradient(145deg, #120426, #1c083a);
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* HOVER EFFECT */
+.skillCard:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+    color: #38bdf8;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2.2rem;
+    }
+
+    .skillCard {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+}
+.sectionDivider {
+    width: 120px;
+    height: 4px;
+    margin: 0 auto 25px;
+    background: linear-gradient(90deg, #a855f7, #38bdf8);
+    border-radius: 10px;
+}
+
+/* EXTRA SPACE ABOVE SKILLS SECTION */
+.skillsSection {
+    margin-top: 120px;  /* adds clean breathing space */
+}
+/* =========================
+   ABOUT SECTION WITH IMAGE
+========================= */
+
+.aboutSection {
+    padding: 80px 10%;
+    margin-top: 80px;
+}
+
+.aboutContent {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+/* ✅ LEFT IMAGE */
+.aboutImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutImage img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #a855f7;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+}
+
+/* ✅ RIGHT SIDE */
+.aboutRight {
+    flex: 2;
+}
+
+/* TEXT */
+.aboutText {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+}
+
+.aboutText p + p {
+    margin-top: 12px;
+}
+
+.aboutText .highlight {
+    color: #a855f7;
+    font-weight: 600;
+}
+
+/* INFO CARD */
+.aboutDetails {
+    margin-top: 25px;
+    background: linear-gradient(145deg, #120426, #1c083a);
+    border-radius: 16px;
+    padding: 22px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.aboutItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.aboutItem:last-child {
+    margin-bottom: 0;
+}
+
+.aboutItem .label {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #9ca3af;
+}
+
+.aboutItem .value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .aboutSection {
+        padding: 60px 6%;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutRight {
+        width: 100%;
+    }
+
+    .aboutImage img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .aboutDetails {
+        text-align: left;
+    }
+}
+
+
+/* ---------------------- */
