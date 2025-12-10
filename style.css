@@ -13,7 +13,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ nav {
 }
 
 header, nav {
-  position: sticky; 
+  position: sticky;
   top: 0;
   z-index: 9999; 
 }
@@ -36,7 +36,6 @@ nav {
   -webkit-backdrop-filter: blur(6px);
   transition: box-shadow 200ms ease, transform 200ms ease, background-color 200ms ease;
 }
-
 
 nav.scrolled {
   box-shadow: 0 6px 20px rgba(2,6,23,0.55);
@@ -221,10 +220,8 @@ nav ul li a:hover {
     background: linear-gradient(90deg, #a855f7, #38bdf8);
     border-radius: 10px;
 }
-
-/* EXTRA SPACE ABOVE SKILLS SECTION */
 .skillsSection {
-    margin-top: 120px;  /* adds clean breathing space */
+    margin-top: 120px;
 }
 /* =========================
    ABOUT SECTION WITH IMAGE
@@ -336,5 +333,54 @@ nav ul li a:hover {
 }
 
 
-/* ---------------------- */
+/* ---------Footer------------- */
+.simpleFooter {
+  background: linear-gradient(180deg, #020617, #02041a);
+  padding: 60px 10% 30px;
+  margin-top: 120px;
+  text-align: center;
+  border-top: 1px solid rgba(168, 85, 247, 0.25);
+}
 
+.footerBrand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.footerRole {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.footerLinks,
+.footerSocials {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footerLinks a,
+.footerSocials a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #38bdf8;
+}
+
+.footerSocials a:hover {
+  color: #a855f7;
+}
+
+.footerCopyright {
+  margin-top: 28px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
