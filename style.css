@@ -23,6 +23,28 @@ nav {
     background-color: #020617;
 }
 
+header, nav {
+  position: sticky; 
+  top: 0;
+  z-index: 9999; 
+}
+
+
+nav {
+  background-color: rgba(1,1,21,0.92); 
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);
+  transition: box-shadow 200ms ease, transform 200ms ease, background-color 200ms ease;
+}
+
+
+nav.scrolled {
+  box-shadow: 0 6px 20px rgba(2,6,23,0.55);
+  transform: translateY(0);
+  background-color: rgba(1,1,21,0.98); 
+}
+
+
 nav .left {
     font-size: 1.5rem;
     font-weight: 600;
@@ -315,3 +337,4 @@ nav ul li a:hover {
 
 
 /* ---------------------- */
+
